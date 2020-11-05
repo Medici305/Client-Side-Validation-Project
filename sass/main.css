@@ -92,7 +92,7 @@ html {
   margin-bottom: 10rem;
 }
 .main-box .right-side .application form {
-  margin: 4rem 4rem;
+  margin: 3rem 4rem;
 }
 .main-box .right-side .application form .input-field {
   margin: 2rem 0rem;
@@ -113,21 +113,21 @@ html {
   font-weight: 500;
 }
 .main-box .right-side .application .terms {
+  color: #b9b6d3;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 0rem 4rem;
+  font-size: 1.2rem;
 }
-.main-box .right-side .application .terms p {
-  color: #b9b6d3;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-.main-box .right-side .application .terms p span {
+.main-box .right-side .application .terms a {
+  margin-left: -1rem;
   color: #ff7a7a;
   font-weight: 900;
   cursor: pointer;
+  background: none;
+  box-shadow: none;
 }
 
 @media only screen and (max-width: 1310px) {
@@ -136,6 +136,13 @@ html {
   }
   .main-box .left-side .title p {
     font-size: 1.3rem;
+  }
+  .main-box .right-side .terms {
+    font-size: 1rem !important;
+  }
+  .main-box .right-side .terms a {
+    margin-left: -1rem;
+    font-size: 0.9rem;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -156,11 +163,11 @@ html {
     text-align: center;
   }
   .main-box .left-side .title h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     padding: 0 2rem;
   }
   .main-box .left-side .title p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding: 0 1rem;
     line-height: 2.2rem;
   }
@@ -190,6 +197,13 @@ html {
     margin-bottom: 7rem;
     margin-top: 2rem;
     flex: 0.7;
+  }
+  .main-box .right-side .terms {
+    font-size: 0.5rem !important;
+  }
+  .main-box .right-side .terms a {
+    margin-left: -1rem;
+    font-size: 0.6rem;
   }
 }
 

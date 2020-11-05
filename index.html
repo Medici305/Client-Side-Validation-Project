@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./node_modules/hover.css/css/hover.css">
     <link rel="stylesheet" href="./sass/main.css">
-    
-    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="shortcut icon" href="./images/check.svg" type="image/x-icon">
+    <title>Client Side Validation</title>
 
   </head>
   <body>
@@ -36,47 +36,64 @@
         </div>
         <div class="application">
           <form id="form" action="#">
+
             <div class="input-field">
               <i class="material-icons prefix">person</i>
-              <input type="text" id="firstName" class="validate">
-              <label for="firstname">First Name</label>
+              <input placeholder="First Name" type="text" id="first_name" class="validate">
               <span id="text-one"></span>
             </div>
 
             <div class="input-field">
               <i class="material-icons prefix">person_outline</i>
-              <input type="text" id="surename" class="validate">
-              <label for="surename">SureName</label>
+              <input placeholder="SureName" type="text" id="surename" class="validate">
               <span id="text-two"></span>
             </div>
 
             <div class="input-field">
               <i class="material-icons prefix">mail</i>
-              <input type="email" id="email" class="validate">
-              <label for="email">Email Address</label>
+              <input placeholder="Email Address" type="email" id="email" class="validate">
               <span id="text-three"></span>
             </div>
 
             <div class="input-field">
               <i class="fa fa-lock prefix"></i>
-              <input type="password" id="password" class="validate">
-              <label for="password">Password</label>
+              <input placeholder="Password" type="password" id="password" class="validate">
               <span id="text-four"></span>
             </div> 
           </form>
           <div class="free-trial hvr-float-shadow">
             <p>CLAIM YOUR FREE TRIAL</p>
           </div>
-          <div class="terms">
-            <p>By clicking the button you are agreeing to our <span>Terms and Services</span></p>
+          
+  <!-- Modal Trigger -->
+          <p class="terms">By clicking the button you are agreeing to our<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Terms and Services</a></p>
+
+          <!-- Modal Structure -->
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h4>Terms & Conditions</h4>
+              <p>
+                <br>
+                These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity
+                and Medici & Co, concerning your access to and use of the client-side-validation.com website as well as any other
+                 media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto collectively, the “Site”.
+                 <br><br>
+                 You agree that by accessing the Site, you have read, understood, and agree to be bound by all of these Terms and Conditions. 
+                 If you do not agree with all of these Terms and Conditions, then you are expressly prohibited from using the Site and you must discontinue use immediately.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
           </div>
+          
         </div>
       </div>
     </section>
 
 
-    
-
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./src/app.js"></script>
   </body>
   </html>
