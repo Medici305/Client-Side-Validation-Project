@@ -1,0 +1,144 @@
+@import '../node_modules/hover.css/css/hover.css';
+@import '../node_modules/materialize-css/dist/css/materialize.css';
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.main-box .right-side .subscription, .main-box .right-side .form {
+  -moz-box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+  font-family: Poppins;
+}
+
+html {
+  font-size: 11px;
+  font-weight: 300;
+}
+
+.main-box {
+  height: 100vh;
+  width: auto;
+  background-image: url("../images/bg-intro-desktop.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: size;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  align-items: none;
+  background-color: #ff7a7a;
+}
+.main-box .left-side, .main-box .right-side {
+  flex: 1;
+}
+.main-box .left-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.main-box .left-side .title {
+  text-align: center;
+  flex: 0.7;
+  height: 50%;
+  color: #fff;
+}
+.main-box .left-side .title h1 {
+  font-size: 5.5rem;
+  font-weight: 600;
+}
+.main-box .left-side .title p {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.main-box .right-side {
+  border: 5px solid yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.main-box .right-side .subscription, .main-box .right-side .form {
+  width: 80%;
+  border-radius: 1rem;
+}
+.main-box .right-side .subscription {
+  background-color: #6055a5;
+  margin-top: 10rem;
+  margin-bottom: 1rem;
+  flex: 0.1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.main-box .right-side .subscription p {
+  color: #fff;
+  font-weight: 200;
+  font-size: 1.3rem;
+}
+.main-box .right-side .subscription p span {
+  font-weight: 600;
+}
+.main-box .right-side .form {
+  border: 5px solid blue;
+  background-color: blue;
+  flex: 0.9;
+  margin-bottom: 10rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    align-items: none;
+  }
+  .main-box .left-side {
+    border: 5px solid blue;
+    flex: 0.35;
+  }
+  .main-box .left-side .title {
+    border: 5px solid red;
+    height: 65%;
+    flex: 0.9;
+    align-items: center;
+  }
+  .main-box .left-side .title h1 {
+    font-size: 2rem;
+    padding: 0 5rem;
+  }
+  .main-box .left-side .title p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  .main-box .right-side {
+    flex: 0.65;
+    border: 5px solid yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-box .right-side .subscription, .main-box .right-side .form {
+    width: 90%;
+    margin: 0;
+  }
+  .main-box .right-side .subscription {
+    margin-top: 1rem;
+    flex: 0.2;
+  }
+  .main-box .right-side .form {
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    flex: 0.8;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

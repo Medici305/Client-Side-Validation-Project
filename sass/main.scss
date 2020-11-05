@@ -1,0 +1,129 @@
+@import 'components/mixin/mixins';
+@import 'components/placeholder/placeholders';
+@import 'components/variable/variables';
+@import '../node_modules/hover.css/css/hover.css';
+@import '../node_modules/materialize-css/dist/css/materialize.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    font-family: Poppins;
+}
+
+html {
+    font: {
+        size: 11px;
+        weight: 300;
+    }
+}
+
+.main-box {
+    //@include border(5px, black);
+    @include dimension(100vh, auto);
+    @include backgroundImage('../images/bg-intro-desktop.png', center center, size, fixed);
+    @include flex();
+    background-color: $red;
+    .left-side, .right-side {
+        flex: 1;
+    }
+    .left-side {
+        //@include border(5px, green);
+        @include flex(flex,row,center,center);
+        .title {
+            //@include border(5px, orange);
+            text-align: center;
+            flex: 0.7;
+            height: 50%;
+            color: #fff;
+            h1 {
+                font: {
+                    size: 5.5rem;
+                    weight: 600;
+                }
+            }
+            p {
+                font: {
+                    size: 1.4rem;
+                    weight: 400;
+                }
+            }
+        }
+    }
+    .right-side {
+        @include border(5px, yellow);
+        @include flex(flex, column, center, flex-start);
+        .subscription, .form {
+            width: 80%;
+            border-radius: 1rem;
+            @extend %box-shadow;
+        }
+        .subscription {
+            background-color: $blue;
+            margin-top: 10rem;
+            margin-bottom: 1rem;
+            flex: 0.1;
+            @include flex(flex,row,center,center);
+            cursor: pointer;
+            p {
+                color: #fff;
+                font : {
+                    weight: 200;
+                    size: 1.3rem;
+                }
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+        .form {
+            @include border(5px, blue);
+            background-color: blue;
+            flex: 0.9;
+            margin-bottom: 10rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-box {
+        @include flex(flex, column);
+        .left-side {
+            @include border(5px, blue);
+            flex: 0.35;
+            .title {
+                @include border(5px, red);
+                height: 65%;
+                flex: 0.9;
+                align-items: center;
+                h1 {
+                    font-size: 2rem;
+                    padding: 0 5rem;
+                }
+                p {
+                    font-size: 1rem;
+                    padding: 0 1rem;
+                }
+            }
+        }
+        .right-side {
+            flex: 0.65;
+            @include border(5px, yellow);
+            @include flex(flex,column,center,center);
+            .subscription, .form {
+                width: 90%;
+                margin: 0;
+            }
+            .subscription {
+                margin-top: 1rem;
+                flex: 0.2;
+            }
+            .form {
+                margin-bottom: 3rem;
+                margin-top: 1rem;
+                flex: 0.8;
+            }
+        }
+    }
+}
