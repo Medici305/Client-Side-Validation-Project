@@ -20,7 +20,6 @@ html {
 }
 
 .main-box {
-    //@include border(5px, black);
     @include dimension(100vh, auto);
     @include backgroundImage('../images/bg-intro-desktop.png', center center, size, fixed);
     @include flex();
@@ -29,32 +28,32 @@ html {
         flex: 1;
     }
     .left-side {
-        //@include border(5px, green);
         @include flex(flex,row,center,center);
         .title {
-            //@include border(5px, orange);
-            text-align: center;
-            flex: 0.7;
+            //text-align: center;
+            //@include border(3px, black);
+            flex: 0.75;
             height: 50%;
             color: #fff;
             h1 {
                 font: {
-                    size: 5.5rem;
+                    size: 5.3rem;
                     weight: 600;
                 }
             }
             p {
                 font: {
-                    size: 1.4rem;
+                    size: 1.7rem;
                     weight: 400;
                 }
+                line-height: 3rem;
+                margin-top: 3rem;
             }
         }
     }
     .right-side {
-        @include border(5px, yellow);
         @include flex(flex, column, center, flex-start);
-        .subscription, .form {
+        .subscription, .application {
             width: 80%;
             border-radius: 1rem;
             @extend %box-shadow;
@@ -77,11 +76,62 @@ html {
                 }
             }
         }
-        .form {
-            @include border(5px, blue);
-            background-color: blue;
+        .application {
+            background-color: #fff;
             flex: 0.9;
             margin-bottom: 10rem;
+            form {
+                margin: 4rem 4rem;
+                .input-field {
+                    margin: 2rem 0rem;
+                }   
+            }
+            .free-trial {
+                background-color: $green;
+                @include flex(flex,row,center,center);
+                height: 12%;
+                @extend %box-shadow;
+                border-radius: 1rem;
+                margin: 2rem 4rem;
+                p {
+                    color: #fff;
+                    font : {
+                        size: 1.4rem;
+                        weight: 500;
+                    }
+                }
+            }
+            .terms {
+                @include flex(flex,row,center,center);
+                margin: 0rem 4rem;
+                p {
+                    color: $grayish-blue;
+                    font : {
+                        size: 1.1rem;
+                        weight: 600;
+                    }
+                    span {
+                        color: $red;
+                        font-weight: 900;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1310px) {
+    .main-box {
+        .left-side {
+            .title {
+                h1 {
+                    font-size: 4rem;
+                }
+                p {
+                    font-size: 1.3rem;
+                }
+            }
         }
     }
 }
@@ -89,40 +139,52 @@ html {
 @media only screen and (max-width: 600px) {
     .main-box {
         @include flex(flex, column);
+        height: 100rem;
         .left-side {
-            @include border(5px, blue);
-            flex: 0.35;
+            //@include border(5px, blue);
+            flex: 0.3;
+            //height: 10rem;
             .title {
-                @include border(5px, red);
+                //@include border(5px, red);
                 height: 65%;
                 flex: 0.9;
                 align-items: center;
+                text-align: center;
                 h1 {
-                    font-size: 2rem;
-                    padding: 0 5rem;
+                    font-size: 2.5rem;
+                    padding: 0 2rem;
                 }
                 p {
-                    font-size: 1rem;
+                    font-size: 1.2rem;
                     padding: 0 1rem;
+                    line-height: 2.2rem;
                 }
             }
         }
         .right-side {
-            flex: 0.65;
-            @include border(5px, yellow);
+            flex: 0.7;
+            //@include border(5px, yellow);
+            //height: 80%;
             @include flex(flex,column,center,center);
-            .subscription, .form {
+            .subscription, .application {
                 width: 90%;
                 margin: 0;
             }
             .subscription {
-                margin-top: 1rem;
-                flex: 0.2;
+                margin-top: 0rem;
+                flex: 0.15;
+                p {
+                    font-size: 1.5rem;
+                    text-align: center;
+                    span {
+                        display: block;
+                    }
+                }
             }
-            .form {
-                margin-bottom: 3rem;
-                margin-top: 1rem;
-                flex: 0.8;
+            .application {
+                margin-bottom: 7rem;
+                margin-top: 2rem;
+                flex: 0.7;
             }
         }
     }
